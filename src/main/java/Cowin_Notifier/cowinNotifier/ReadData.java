@@ -61,7 +61,7 @@ public class ReadData {
 				breader = new BufferedReader(new InputStreamReader(hr.getErrorStream()));
 				while((line = breader.readLine()) != null) {
 					responseContent.append(line);
-				}
+			}
 				
 				breader.close();
 				
@@ -69,7 +69,7 @@ public class ReadData {
 				breader = new BufferedReader(new InputStreamReader(hr.getInputStream()));
 				while((line = breader.readLine()) != null) {
 					responseContent.append(line);
-				}
+			}
 				
 				breader.close();
 				
@@ -120,14 +120,15 @@ public class ReadData {
 					 		System.out.println("Available Capacity: " + available);
 					 		
 					 			if(available > 0) {
-					 				sendEmail("vanshajpahwa07@gmail.com");
+					 				sendEmail("Recepient's email address");
 					 			}
 					 			else {
-					 				System.out.println("\nSorry, No slots are available for booking");
+					 				System.out.println("\n\nSorry, No slots are available for booking");
 					 				System.out.println("------------------------------------------");
 					 			}		
 					 	}
 					}
+
 				Thread.currentThread();
 				Thread.sleep(10000); //10 secs
 			}
@@ -142,9 +143,11 @@ public class ReadData {
 			hr.disconnect();
 		}
 	}
-	
+
+	//Method to send emails as a notification whenever slots are available
+
 	private static void sendEmail(String recepient) throws MessagingException {
-		System.out.println("\nPreparing to send email..\n");
+		System.out.println("Preparing to send email..\n");
 		Properties properties = new Properties();
 		
 		properties.put("mail.smtp.auth", "true");
@@ -152,8 +155,8 @@ public class ReadData {
 		properties.put("mail.smtp.host", "smtp.gmail.com");
 		properties.put("mail.smtp.port", "587");
 		
-		final String myEmail = "vanshajpahwa07@gmail.com";
-		final String password = "vanshaj07.gmail";
+		final String myEmail = "Your email address";
+		final String password = "Your password";
 		
 		Session s = Session.getInstance(properties, new Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication(){
