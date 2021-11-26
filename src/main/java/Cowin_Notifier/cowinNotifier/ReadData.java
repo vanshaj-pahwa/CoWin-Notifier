@@ -84,7 +84,7 @@ public class ReadData {
 			
 			JSONObject jsonObject = (JSONObject) obj;
 			
-			JSONArray centers = (JSONArray) jsonObject.get("centers");
+			JSONArray centers = (JSONArray) jsonObject.get("centers"); // Extracting data of centers to an JSON array.
 			
 			while(true) {	
 				
@@ -120,7 +120,7 @@ public class ReadData {
 					 		System.out.println("Available Capacity: " + available);
 					 		
 					 			if(available > 0) {
-					 				sendEmail("Recepient's email address");
+					 				sendEmail("Recepient's email address"); //Enter your own email address here to get slots availability notification on your email.
 					 			}
 					 			else {
 					 				System.out.println("\n\nSorry, No slots are available for booking");
