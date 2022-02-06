@@ -1,8 +1,6 @@
 # CoWin-Notifier
 An automated script written in Java programming language that notifies the vaccination slot availability in India.
 
-### Status: 
-Currently, working on scheduling the application and it's background processes.
 ### Prerequisite: 
 - <a href = "https://www.oracle.com/java/technologies/downloads/"> JDK </a> (Java Development Kit) 
 - <a href = "https://www.eclipse.org/downloads/">Eclipse IDE</a>
